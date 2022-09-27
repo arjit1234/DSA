@@ -4,26 +4,21 @@ package Queue;
 public class QueueUse
 {
 	public static void main(String[] args)  {
-		QueueUsingArray queue=new QueueUsingArray();
+//		QueueUsingArray queue=new QueueUsingArray();
+		QueueUsingLL<Integer> queue=new QueueUsingLL<>();
 		int arr[]= {10,20,30,40,50};
-		for(int i=0;i<arr.length;i++)
+		for(int elem:arr)
 		{
-			try {
-				queue.enqueue(arr[i]);
-			}
-			catch(QueueFullException e)
-			{
-				
-			}
+			queue.enqueue(elem);
 		}
 		
 		while(!queue.isEmpty())
 		{
-			
 			try {
 				System.out.println(queue.dequeue());
-			} catch (QueueEmptyException e) {
-				// TODO Auto-generated catch block
+			}
+			catch(QueueEmptyException e)
+			{
 				
 			}
 		}
