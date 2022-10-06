@@ -5,12 +5,11 @@ public class ReverseFirstKElement {
 	
 	public static Queue<Integer> kreverse(Queue<Integer> input,int k)
 	{
-		Stack<Integer> stack=new Stack<>();
+		Stack<Integer> stack=new Stack<Integer>();
 		for(int i=0;i<k;i++)
 		{
 			stack.push(input.poll());
 		}
-		
 		while(!stack.isEmpty())
 		{
 			input.add(stack.pop());

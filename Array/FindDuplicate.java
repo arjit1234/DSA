@@ -5,17 +5,19 @@ public class FindDuplicate
 	
 	public static int duplicate(int arr[])
 	{
+		ArrayList<Integer> al=new ArrayList<Integer>();
 		for(int i=0;i<(arr.length-1);i++)
 		{
 			for(int j=i+1;j<arr.length;j++)
 			{
 				if(arr[i]==arr[j])
 				{
-					return arr[i];
+					al.add(arr[i]);
 				}
 			}
 		}
-		return Integer.MAX_VALUE;
+		int[] ans=new int[al.size()];
+
 	}
 	public static void main(String[] args) {
 		
